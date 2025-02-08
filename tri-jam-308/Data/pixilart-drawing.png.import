@@ -2,16 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:tri-jam-308/Data/pixilart-drawing.png.import
 uid="uid://dwflwpsnblslq"
+path="res://.godot/imported/pixilart-drawing.png-daff54fa4966468d8eaab5ad367ae272.ctex"
+=======
+uid="uid://ci3hg4g8wr5lu"
 path="res://.godot/imported/pixilart-drawing.png-9e9c431ac86a42d1fefc4da3ac6bc15c.ctex"
+>>>>>>> Stashed changes:tri-jam-308/pixilart-drawing.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixilart-drawing.png"
-dest_files=["res://.godot/imported/pixilart-drawing.png-9e9c431ac86a42d1fefc4da3ac6bc15c.ctex"]
+source_file="res://Data/pixilart-drawing.png"
+dest_files=["res://.godot/imported/pixilart-drawing.png-daff54fa4966468d8eaab5ad367ae272.ctex"]
 
 [params]
 
