@@ -29,5 +29,5 @@ func _on_propagation_timer_timeout() -> void:
 				chance_de_prendre_feu += 0.1
 		else :
 			continue
-	if random_number > chance_de_prendre_feu :
+	if random_number < chance_de_prendre_feu :
 		est_enfeu = true
