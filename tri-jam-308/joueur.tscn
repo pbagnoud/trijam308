@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bw3njnck8nva7"]
+[gd_scene load_steps=6 format=3 uid="uid://bw3njnck8nva7"]
 
 [ext_resource type="Script" path="res://joueur.gd" id="1_jqwck"]
 [ext_resource type="Texture2D" uid="uid://bmb4ll32pqc74" path="res://Data/pixilart-drawing.png" id="2_0qqcy"]
+[ext_resource type="PackedScene" uid="uid://6llviiqjrsmq" path="res://gestion_objets.tscn" id="3_phyil"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5d8ey"]
 animations = [{
@@ -22,8 +23,6 @@ script = ExtResource("1_jqwck")
 
 [node name="température" type="Node2D" parent="."]
 
-[node name="objets" type="Node" parent="."]
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5d8ey")
 
@@ -37,3 +36,5 @@ target_position = Vector2(39, 0)
 
 [node name="raycastLeft" type="RayCast2D" parent="RayCast"]
 target_position = Vector2(-39, 0)
+
+[node name="Gestion Objets" parent="." instance=ExtResource("3_phyil")]

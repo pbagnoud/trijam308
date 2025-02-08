@@ -3,7 +3,7 @@ extends Node2D
 @onready var aire_herbe: Area2D = $AireHerbe
 @onready var image_herbe_enfeu: Sprite2D = $ImageHerbeEnfeu
 
-var est_enfeu: bool = false :
+var est_enfeu: bool = true :
 	set(value) :
 		est_enfeu = value
 		image_herbe_enfeu.visible = true
