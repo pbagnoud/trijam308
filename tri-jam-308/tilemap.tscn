@@ -1,3 +1,5 @@
-[gd_scene format=3 uid="uid://da0og7l2usdm6"]
+[gd_scene format=3 uid="uid://cwxsytq36rbsy"]
 
-[node name="TileMap" type="TileMapLayer"]
+[node name="procedural_world" type="TileMapLayer"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]

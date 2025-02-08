@@ -1,10 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://c30kqq0mgmet7"]
+[gd_scene load_steps=5 format=3 uid="uid://c30kqq0mgmet7"]
 
 [ext_resource type="Script" path="res://herbe.gd" id="1_bbgq5"]
 [ext_resource type="Texture2D" uid="uid://c07qvajya6vag" path="res://Data/Herbe_moche.png" id="2_oh0bp"]
+[ext_resource type="Texture2D" uid="uid://c5h1ruu6e7lcv" path="res://Data/Herbe_enfeu.png" id="3_7vaq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0blc"]
+size = Vector2(72, 73)
 
 [node name="Herbe" type="Node2D"]
 script = ExtResource("1_bbgq5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="ImageHerbe" type="Sprite2D" parent="."]
 texture = ExtResource("2_oh0bp")
+
+[node name="AireHerbe" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AireHerbe"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_f0blc")
+
+[node name="ImageHerbeEnfeu" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_7vaq0")
+
+[node name="PropagationTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="PropagationTimer" to="." method="_on_propagation_timer_timeout"]

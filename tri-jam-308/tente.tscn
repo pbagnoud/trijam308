@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://dkr7asr85hw5y"]
+[gd_scene load_steps=4 format=3 uid="uid://dkr7asr85hw5y"]
+
+[ext_resource type="Script" path="res://tente.gd" id="1_jwspr"]
+[ext_resource type="Texture2D" uid="uid://ddltdtvg7ybm5" path="res://Data/tente.png" id="1_v4orj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpahf"]
+size = Vector2(64, 42)
 
 [node name="tente" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_v4orj")
+
+[node name="tente" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_jpahf")
+script = ExtResource("1_jwspr")
