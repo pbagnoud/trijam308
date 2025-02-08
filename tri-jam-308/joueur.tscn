@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjxxg3f20e3xv"]
 
 [ext_resource type="Script" path="res://joueur.gd" id="1_jqwck"]
-[ext_resource type="Texture2D" uid="uid://dwflwpsnblslq" path="res://pixilart-drawing.png" id="2_0qqcy"]
+[ext_resource type="Texture2D" uid="uid://dwflwpsnblslq" path="res://Data/pixilart-drawing.png" id="2_0qqcy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5d8ey"]
 animations = [{
