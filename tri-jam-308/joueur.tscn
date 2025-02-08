@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bw3njnck8nva7"]
+[gd_scene load_steps=6 format=3 uid="uid://bjxxg3f20e3xv"]
 
 [ext_resource type="Script" path="res://joueur.gd" id="1_jqwck"]
 [ext_resource type="Texture2D" uid="uid://bmb4ll32pqc74" path="res://Data/pixilart-drawing.png" id="2_0qqcy"]
+[ext_resource type="PackedScene" uid="uid://t4vjoy7y8op3" path="res://température.tscn" id="2_begvn"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5d8ey"]
 animations = [{
@@ -20,7 +21,7 @@ radius = 27.0
 [node name="Joueur" type="CharacterBody2D"]
 script = ExtResource("1_jqwck")
 
-[node name="température" type="Node2D" parent="."]
+[node name="température" parent="." instance=ExtResource("2_begvn")]
 
 [node name="objets" type="Node" parent="."]
 
