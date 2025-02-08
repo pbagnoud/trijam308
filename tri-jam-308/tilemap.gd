@@ -1,9 +1,9 @@
 extends TileMapLayer
 
 func _ready():
-	generate_tents(5)
+	#generate_tents(5)
 	generate_sortie()
-	generate_foyers(3)
+	#generate_foyers(3)
 	
 var coords = Vector2i(0, 0) # Créez un Vector2i pour les coordonnées
 
@@ -22,9 +22,12 @@ func generate_sortie():
 	set_cell(coords, 2)  # La sortie possède id = 2
 	
 	
-func generate_foyers(number_of_tents):
-	for i in range(number_of_tents):
-		var x = randi() % 20 # Génère une coordonnée X aléatoire
-		var y = (randi() % 30)  # Génère une coordonnée Y aléatoire entre 330 et 0
-		var coords = Vector2i(x, y) # Créez un Vector2i pour les coordonnées
+func generate_foyers(number_of_foyers):
+	print('bla')
+	var child = get_children()
+	print(child)
+	child.shuffle()
+	for c in child.slice(0, number_of_foyers):
+		print(c)
+		c.est_enfeu = true
 		
