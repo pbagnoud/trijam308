@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv04n3ad5mn1s"]
+[gd_scene load_steps=4 format=3 uid="uid://d2wxe5ak2mot4"]
 
-[ext_resource type="PackedScene" path="res://tilemap.tscn" id="1_531i1"]
-[ext_resource type="PackedScene" path="res://joueur.tscn" id="2_wcdv4"]
+[ext_resource type="PackedScene" uid="uid://da0og7l2usdm6" path="res://tilemap.tscn" id="1_531i1"]
+[ext_resource type="PackedScene" uid="uid://bjxxg3f20e3xv" path="res://joueur.tscn" id="2_wcdv4"]
 
 [sub_resource type="FontVariation" id="FontVariation_nvyv4"]
 
@@ -28,6 +28,7 @@ size_flags_vertical = 8
 color = Color(0.59, 0.59, 0.59, 1)
 
 [node name="Container" type="Container" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
 offset_top = -476.0
 offset_right = 40.0
 offset_bottom = -436.0
