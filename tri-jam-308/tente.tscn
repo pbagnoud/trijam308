@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkr7asr85hw5y"]
+[gd_scene load_steps=4 format=3 uid="uid://cwuahbnk3p8nu"]
 
 [ext_resource type="Script" path="res://tente.gd" id="1_jwspr"]
 [ext_resource type="Texture2D" uid="uid://ddltdtvg7ybm5" path="res://Data/tente.png" id="1_v4orj"]
