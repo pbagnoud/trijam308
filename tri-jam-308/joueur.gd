@@ -24,6 +24,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 		
+<<<<<<< Updated upstream
 	#Collision avec tentes
 	var collider := raycast_right.get_collider()
 	if collider.has("objet_disponible"):
@@ -33,4 +34,14 @@ func _physics_process(delta: float) -> void:
 	#Température
 		
 	
+=======
+		
+	#Collision tente
+	if raycast_right.is_colliding():
+		var collider = raycast_right.get_collider()
+		if collider.has("objet_disponible"):
+			collider.objet_disponible =0
+		
+		
+>>>>>>> Stashed changes
 	move_and_slide()
