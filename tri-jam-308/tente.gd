@@ -4,7 +4,7 @@ extends Node2D
 var objet_disponible: bool = true:
 	set(value):
 		objet_disponible = value
-		sprit_2d.modulate = 666666
+		sprite_2d.modulate = 666666
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
