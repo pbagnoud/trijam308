@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2wxe5ak2mot4"]
+[gd_scene load_steps=4 format=3 uid="uid://bv04n3ad5mn1s"]
 
-[ext_resource type="PackedScene" uid="uid://da0og7l2usdm6" path="res://tilemap.tscn" id="1_531i1"]
-[ext_resource type="PackedScene" uid="uid://bjxxg3f20e3xv" path="res://joueur.tscn" id="2_wcdv4"]
+[ext_resource type="PackedScene" uid="uid://cwxsytq36rbsy" path="res://tilemap.tscn" id="1_531i1"]
+[ext_resource type="PackedScene" uid="uid://bw3njnck8nva7" path="res://joueur.tscn" id="2_wcdv4"]
 
 [sub_resource type="FontVariation" id="FontVariation_nvyv4"]
 

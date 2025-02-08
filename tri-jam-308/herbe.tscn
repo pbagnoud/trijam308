@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://c30kqq0mgmet7"]
+[gd_scene load_steps=4 format=3 uid="uid://c30kqq0mgmet7"]
 
 [ext_resource type="Script" path="res://herbe.gd" id="1_bbgq5"]
 [ext_resource type="Texture2D" uid="uid://c07qvajya6vag" path="res://Data/Herbe_moche.png" id="2_oh0bp"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0blc"]
+size = Vector2(72, 73)
+
 [node name="Herbe" type="Node2D"]
 script = ExtResource("1_bbgq5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="ImageHerbe" type="Sprite2D" parent="."]
 texture = ExtResource("2_oh0bp")
+
+[node name="AireHerbe" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AireHerbe"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_f0blc")

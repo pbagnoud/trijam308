@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjxxg3f20e3xv"]
+[gd_scene load_steps=5 format=3 uid="uid://bw3njnck8nva7"]
 
 [ext_resource type="Script" path="res://joueur.gd" id="1_jqwck"]
 [ext_resource type="Texture2D" uid="uid://dwflwpsnblslq" path="res://pixilart-drawing.png" id="2_0qqcy"]
