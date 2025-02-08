@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://da0og7l2usdm6"]
+
+[node name="TileMap" type="TileMapLayer"]
