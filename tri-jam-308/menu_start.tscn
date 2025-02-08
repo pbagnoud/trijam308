@@ -1,5 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://8lomph636uys"]
 
-[gd_scene format=3 uid="uid://8lomph636uys"]
+[ext_resource type="Script" path="res://menu_start.gd" id="1_mbd4k"]
 
 [node name="menuStart" type="Control"]
 layout_mode = 3
@@ -8,3 +9,75 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mbd4k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="Container" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Title" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "BEST GAME EVER"
+
+[node name="Play" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Start"
+
+[node name="Tutoriel" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Tutorial"
+
+[node name="Container" type="Container" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Container2" type="Container" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="tuto" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 50.0
+offset_top = 31.0
+offset_right = 1105.0
+offset_bottom = 621.0
+color = Color(0.68, 0.68, 0.68, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="tuto"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 7.0
+offset_right = 1037.0
+offset_bottom = 299.0
+text = "Tutorial
+
+Here is a very instructive text about how we play the game"
+
+[node name="close" type="Button" parent="tuto"]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 464.0
+offset_right = 640.0
+offset_bottom = 527.0
+text = "Close"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Tutoriel" to="." method="_on_tutoriel_pressed"]
+[connection signal="pressed" from="tuto/close" to="." method="_on_close_pressed"]
