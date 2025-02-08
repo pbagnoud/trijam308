@@ -12,7 +12,6 @@
 [node name="Joueur" parent="." instance=ExtResource("2_wcdv4")]
 
 [node name="Camera2D" type="Camera2D" parent="Joueur"]
-enabled = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
