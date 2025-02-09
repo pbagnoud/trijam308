@@ -25,18 +25,23 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 		
 	#Play animations
-
-	if direction_vert == 0:
+	animated_sprite.flip_h = false
+	if direction_vert == 0 and direction_hor == 0:
 		animated_sprite.play("idle")
 	elif direction_vert == 1:
 		animated_sprite.play("walk_down")
 	elif direction_vert == -1:
 		animated_sprite.play("walk_up")
+
+	elif direction_hor == 1:
+		animated_sprite.play("walk_right")
 		
-	#if direction > 0:
-		#animated_sprite.flip_h = false
-	#if direction < 0:
-		#animated_sprite.flip_h = true
+	elif direction_hor == -1:
+		animated_sprite.flip_h = true
+		animated_sprite.play("walk_right")
+		
+		
+
 		
 		
 	#Collision avec tentes

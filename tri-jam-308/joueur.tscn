@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://bjxxg3f20e3xv"]
+[gd_scene load_steps=23 format=3 uid="uid://bjxxg3f20e3xv"]
 
 [ext_resource type="Script" path="res://joueur.gd" id="1_jqwck"]
 [ext_resource type="Texture2D" uid="uid://bmbn2pgcchhhc" path="res://Data/idle.png" id="2_0kkpu"]
 [ext_resource type="Texture2D" uid="uid://cgnuq6365pkmx" path="res://Data/walk_down.png" id="2_ykgrj"]
 [ext_resource type="PackedScene" uid="uid://6llviiqjrsmq" path="res://gestion_objets.tscn" id="3_phyil"]
+[ext_resource type="Texture2D" uid="uid://kowkiqnqwxr2" path="res://Data/walk_right.png" id="4_0eltp"]
 [ext_resource type="Texture2D" uid="uid://csc1njuouoyqe" path="res://Data/walk_up.png" id="4_rmmbf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_akjfv"]
@@ -29,6 +30,22 @@ region = Rect2(128, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_icheo"]
 atlas = ExtResource("2_ykgrj")
 region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyemx"]
+atlas = ExtResource("4_0eltp")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34xh7"]
+atlas = ExtResource("4_0eltp")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcmni"]
+atlas = ExtResource("4_0eltp")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6g7v"]
+atlas = ExtResource("4_0eltp")
+region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tpdwb"]
 atlas = ExtResource("4_rmmbf")
@@ -78,6 +95,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qyemx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34xh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcmni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6g7v")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_tpdwb")
 }, {
 "duration": 1.0,
@@ -105,9 +139,9 @@ script = ExtResource("1_jqwck")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5d8ey")
-animation = &"walk_down"
-autoplay = "walk_up"
-frame_progress = 0.329589
+animation = &"walk_right"
+autoplay = "walk_right"
+frame_progress = 0.769266
 
 [node name="RayCast" type="Node2D" parent="."]
 
