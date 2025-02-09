@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c30kqq0mgmet7" path="res://herbe.tscn" id="1_ygo5m"]
 [ext_resource type="PackedScene" uid="uid://d04re7ucsxir8" path="res://sortie.tscn" id="2_otqau"]
-[ext_resource type="PackedScene" path="res://tente.tscn" id="3_q1fmu"]
+[ext_resource type="PackedScene" uid="uid://cwuahbnk3p8nu" path="res://tente.tscn" id="3_q1fmu"]
 [ext_resource type="Script" path="res://tilemap.gd" id="4_2h3ex"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_perh2"]
