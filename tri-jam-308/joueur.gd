@@ -4,7 +4,11 @@ const SPEED = 390.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var raycast_right: RayCast2D = $RayCast/raycastRight
+@onready var gestion_objets: Node = $"Gestion Objets"
 
+func get_money() -> int:
+	return gestion_objets.objets_dans_inventaire['pièce']
+	
 func _physics_process(delta: float) -> void:
 	#
 	# Get the input direction: -1,0 or 1

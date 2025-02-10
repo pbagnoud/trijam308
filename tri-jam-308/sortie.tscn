@@ -13,6 +13,7 @@ script = ExtResource("1_medeq")
 texture = ExtResource("2_5pere")
 
 [node name="FeeText" type="RichTextLabel" parent="."]
+visible = false
 offset_left = -43.0
 offset_top = 27.0
 offset_right = 130.0
