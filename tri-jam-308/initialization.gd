@@ -1,34 +1,38 @@
-extends Node
+extends Node2D
 
 @export var tent_scene: PackedScene
 @export var sortie_scene: PackedScene
+@onready var main: Node2D = $".."
 
 func _ready():
-	spawn_tent()
+	spawn_tent(5)
 	spawn_sortie()
 
-func spawn_tent():
+func spawn_tent(number_of_tents):
 	
-	# Generate random coordinates within the viewport.
-	var x = randi() % 30
-	var y = randi() % 30
-	var random_position = Vector2(x, y)
-	print("tente ", random_position)
+	for i in number_of_tents:
+		
+		# Generate random coordinates within the viewport.
+		var x = randi() % 20 
+		var y = randi() % 20 + 1
+		var random_position = Vector2(64*x, 64*y)
+		print("tente ", random_position)
 
-	# Instantiate the tent scene.
-	var tent_instance = tent_scene.instantiate()
+		# Instantiate the tent scene.
+		var tent_instance = tent_scene.instantiate()
 
-	# Set the position of the tent instance.
-	tent_instance.position = random_position
+		# Set the position of the tent instance.
+		tent_instance.position = random_position
 
-	# Add the tent instance to the main scene.
-	add_child(tent_instance)
+		# Add the tent instance to the main scene.
+		add_child(tent_instance)
+
 
 func spawn_sortie():
 	
 	# Generate random coordinates within the viewport.
-	var x = randi() % 30
-	var random_position = Vector2(x, 60)
+	var x = randi() % 20
+	var random_position = Vector2(64*x, 64*60)
 	print("sortie ", random_position)
 
 	# Instantiate the tent scene.

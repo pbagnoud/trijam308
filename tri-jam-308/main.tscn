@@ -24,11 +24,11 @@ custom_data_layer_0/name = "en_feu"
 custom_data_layer_0/type = 2
 sources/3 = SubResource("TileSetAtlasSource_3tv75")
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_531i1")]
 
-[node name="Initialization" type="Node" parent="."]
+[node name="Initialization" type="Node2D" parent="."]
 script = ExtResource("3_g6pfs")
 tent_scene = ExtResource("4_lbloo")
 sortie_scene = ExtResource("5_0y7rh")
