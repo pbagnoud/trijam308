@@ -1,3 +1,29 @@
-[gd_scene format=3 uid="uid://d04re7ucsxir8"]
+[gd_scene load_steps=4 format=3 uid="uid://yn66tjoq3ji6"]
+
+[ext_resource type="Script" path="res://sortie.gd" id="1_medeq"]
+[ext_resource type="Texture2D" uid="uid://qa4ss4esuc26" path="res://Data/Helicoptère.png" id="2_5pere"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ao75"]
+size = Vector2(224, 230)
 
 [node name="Sortie" type="Node2D"]
+script = ExtResource("1_medeq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5pere")
+
+[node name="FeeText" type="RichTextLabel" parent="."]
+offset_left = -43.0
+offset_top = 27.0
+offset_right = 130.0
+offset_bottom = 67.0
+text = "NEED 1€ FEE"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_5ao75")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
