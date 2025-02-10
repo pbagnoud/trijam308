@@ -4,6 +4,9 @@ extends Node2D
 
 var body_proximal = 'no'
 
+
+	
+
 func distance_to_proximity(distance: float) -> float:
 	var max_distance = 100.0
 	var min_distance = 10.0
@@ -28,12 +31,12 @@ func _process(delta: float) -> void:
 	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group('player'):
+	if body.is_in_group('Player'):
 		if body.get_money() == 0:
 			fee_text.visible = true
 			
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body.is_in_group('player'):
+	if body.is_in_group('Player'):
 		fee_text.visible = false
 		body_proximal = 'no'
