@@ -131,7 +131,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_foonv"]
 radius = 27.0
 
-[node name="Joueur" type="CharacterBody2D"]
+[node name="Joueur" type="CharacterBody2D" groups=["Player"]]
 z_index = 10
 script = ExtResource("1_jqwck")
 
