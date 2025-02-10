@@ -41,11 +41,12 @@ func _physics_process(delta: float) -> void:
 		
 		
 	#Collision avec tentes
-	if raycast_right.is_colliding():
-		var collider := raycast_right.get_collider()
-		if collider.has("objet_disponible"):
-				if collider.objet_disponible == 1:
-					collider.objet_disponible = 0
+	#if raycast_right.is_colliding():
+		#var collider := raycast_right.get_collider()
+		#if collider.has("objet_disponible"):
+				#if collider.objet_disponible == 1:
+					#collider.objet_disponible = 0
+		#print("tente")
 	
 	#Température
 		
