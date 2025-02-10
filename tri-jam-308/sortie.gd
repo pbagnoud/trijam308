@@ -7,6 +7,7 @@ var body_proximal = 'no'
 func _process(delta: float) -> void:
 	if body_proximal == 'no':
 		pass
+
 	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
