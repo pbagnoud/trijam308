@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv04n3ad5mn1s"]
+[gd_scene load_steps=7 format=3 uid="uid://bv04n3ad5mn1s"]
 
 [ext_resource type="PackedScene" uid="uid://cdsdku4hcsbu0" path="res://tilemap.tscn" id="1_531i1"]
 [ext_resource type="PackedScene" uid="uid://bjxxg3f20e3xv" path="res://joueur.tscn" id="2_1cqrk"]
-[ext_resource type="PackedScene" uid="uid://cevl2qi13rmqp" path="res://herbefeu.tscn" id="3_mr01b"]
+[ext_resource type="Script" path="res://initialization.gd" id="3_g6pfs"]
 [ext_resource type="PackedScene" uid="uid://cwuahbnk3p8nu" path="res://tente.tscn" id="4_lbloo"]
+[ext_resource type="PackedScene" uid="uid://d04re7ucsxir8" path="res://sortie.tscn" id="5_0y7rh"]
 
 [sub_resource type="FontVariation" id="FontVariation_nvyv4"]
 
@@ -61,9 +62,7 @@ text = "0 bouteille
 
 [node name="PropagationTimer" type="Timer" parent="."]
 
-[node name="Herbefeu" parent="." instance=ExtResource("3_mr01b")]
-z_index = 1
-position = Vector2(673, 287)
-
-[node name="tente" parent="." instance=ExtResource("4_lbloo")]
-position = Vector2(366, 275)
+[node name="Initialization" type="Node" parent="."]
+script = ExtResource("3_g6pfs")
+tent_scene = ExtResource("4_lbloo")
+sortie_scene = ExtResource("5_0y7rh")
