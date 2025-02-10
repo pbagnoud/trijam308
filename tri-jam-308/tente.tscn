@@ -1,28 +1,33 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwuahbnk3p8nu"]
 
-[ext_resource type="Script" path="res://tente.gd" id="1_jwspr"]
 [ext_resource type="Texture2D" uid="uid://ddltdtvg7ybm5" path="res://Data/tente.png" id="1_v4orj"]
+[ext_resource type="Script" path="res://detect_area.gd" id="2_f36tu"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_3kifp"]
-radius = 62.0322
+[sub_resource type="CircleShape2D" id="CircleShape2D_06egi"]
+radius = 73.0069
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_antya"]
-size = Vector2(63, 62)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2gf3"]
+size = Vector2(53, 49)
 
-[node name="tente" type="Area2D"]
-script = ExtResource("1_jwspr")
+[node name="tente" type="Node2D"]
 
-[node name="DetectArea" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_3kifp")
+[node name="DetectArea" type="Area2D" parent="."]
+script = ExtResource("2_f36tu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectArea"]
+shape = SubResource("CircleShape2D_06egi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, -0.5)
+position = Vector2(0, -2)
 scale = Vector2(1, 0.984375)
 texture = ExtResource("1_v4orj")
 
-[node name="ForbiddenArea" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -1)
-shape = SubResource("RectangleShape2D_antya")
+[node name="ForbiddenArea" type="StaticBody2D" parent="."]
+position = Vector2(1.5, -0.5)
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ForbiddenArea"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_i2gf3")
+
+[connection signal="body_entered" from="DetectArea" to="DetectArea" method="_on_body_entered"]
+[connection signal="body_exited" from="DetectArea" to="DetectArea" method="_on_body_exited"]
