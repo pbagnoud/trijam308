@@ -32,16 +32,12 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play("walk_down")
 	elif direction_vert == -1:
 		animated_sprite.play("walk_up")
-
 	elif direction_hor == 1:
 		animated_sprite.play("walk_right")
-		
 	elif direction_hor == -1:
 		animated_sprite.flip_h = true
 		animated_sprite.play("walk_right")
 		
-		
-
 		
 		
 	#Collision avec tentes
