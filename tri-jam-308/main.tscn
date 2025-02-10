@@ -1,9 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv04n3ad5mn1s"]
+[gd_scene load_steps=6 format=3 uid="uid://bv04n3ad5mn1s"]
 
 [ext_resource type="PackedScene" uid="uid://cdsdku4hcsbu0" path="res://tilemap.tscn" id="1_531i1"]
-
 [ext_resource type="PackedScene" uid="uid://bjxxg3f20e3xv" path="res://joueur.tscn" id="2_1cqrk"]
-
+[ext_resource type="PackedScene" uid="uid://cevl2qi13rmqp" path="res://herbefeu.tscn" id="3_mr01b"]
+[ext_resource type="PackedScene" uid="uid://cwuahbnk3p8nu" path="res://tente.tscn" id="4_lbloo"]
 
 [sub_resource type="FontVariation" id="FontVariation_nvyv4"]
 
@@ -59,3 +59,9 @@ theme_override_font_sizes/normal_font_size = 100
 text = "0 bottle"
 
 [node name="PropagationTimer" type="Timer" parent="."]
+
+[node name="Herbefeu" parent="." instance=ExtResource("3_mr01b")]
+position = Vector2(710, 258)
+
+[node name="tente" parent="." instance=ExtResource("4_lbloo")]
+position = Vector2(366, 275)
