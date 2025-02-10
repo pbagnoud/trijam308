@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bjxxg3f20e3xv" path="res://joueur.tscn" id="2_1cqrk"]
 [ext_resource type="Script" path="res://initialization.gd" id="3_g6pfs"]
 [ext_resource type="PackedScene" uid="uid://cwuahbnk3p8nu" path="res://tente.tscn" id="4_lbloo"]
-[ext_resource type="PackedScene" uid="uid://yn66tjoq3ji6" path="res://sortie.tscn" id="5_0y7rh"]
+[ext_resource type="PackedScene" path="res://sortie.tscn" id="5_0y7rh"]
 [ext_resource type="Texture2D" uid="uid://c5h1ruu6e7lcv" path="res://Data/Herbe_enfeu.png" id="5_cdc55"]
 [ext_resource type="Script" path="res://feu.gd" id="7_f3w33"]
 
