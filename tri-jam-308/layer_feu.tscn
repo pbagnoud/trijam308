@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx54dunjfv7t1"]
+[gd_scene load_steps=5 format=3 uid="uid://cx54dunjfv7t1"]
 
 [ext_resource type="Texture2D" uid="uid://c5h1ruu6e7lcv" path="res://Data/Herbe_enfeu.png" id="1_m2nd7"]
+[ext_resource type="Script" path="res://layer_feu.gd" id="2_pikih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3vwp"]
 texture = ExtResource("1_m2nd7")
@@ -9,8 +10,10 @@ texture = ExtResource("1_m2nd7")
 
 [sub_resource type="TileSet" id="TileSet_dsgne"]
 tile_size = Vector2i(64, 64)
-sources/1 = SubResource("TileSetAtlasSource_f3vwp")
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_f3vwp")
 
 [node name="Layer_Feu" type="TileMapLayer"]
-tile_map_data = PackedByteArray(0, 0, 3, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_map_data = PackedByteArray(0, 0, 3, 0, 5, 0, 1, 0, 0, 0, 0, 0, 0, 0, 15, 0, 5, 0, 1, 0, 0, 0, 0, 0, 0, 0)
 tile_set = SubResource("TileSet_dsgne")
+script = ExtResource("2_pikih")
