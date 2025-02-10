@@ -1,6 +1,5 @@
 extends Area2D
 
-
 @onready var sprite_2d: Sprite2D = $"../Sprite2D"
 @onready var objet_disponible: bool = true
 @onready var objet_à_portée : bool = false
