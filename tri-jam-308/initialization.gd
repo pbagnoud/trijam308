@@ -5,7 +5,7 @@ extends Node2D
 @onready var main: Node2D = $".."
 
 func _ready():
-	spawn_tent(5)
+	spawn_tent(35)
 	spawn_sortie()
 
 func spawn_tent(number_of_tents):
@@ -13,7 +13,7 @@ func spawn_tent(number_of_tents):
 	for i in number_of_tents:
 		
 		# Generate random coordinates within the viewport.
-		var x = randi() % 20 
+		var x = randi() % 20 + 1
 		var y = randi() % 20 + 1
 		var random_position = Vector2(64*x, 64*y)
 		print("tente ", random_position)
@@ -31,7 +31,7 @@ func spawn_tent(number_of_tents):
 func spawn_sortie():
 	
 	# Generate random coordinates within the viewport.
-	var x = randi() % 20
+	var x = randi() % 20 + 1
 	var random_position = Vector2(64*x, 64*60)
 	print("sortie ", random_position)
 
