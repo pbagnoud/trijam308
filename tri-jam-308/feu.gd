@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_propagation_timer_timeout() -> void:
+	var change_ce_round = []
 	for i in range(0,20) :
 		for j in range(0,60) : 
 			var my_random_number = rng.randf_range(0, 1)
@@ -25,4 +26,6 @@ func _on_propagation_timer_timeout() -> void:
 			if get_cell_source_id(Vector2i(i,j-1)) == 3 :
 				chance += 0.2
 			if my_random_number < chance :
-				set_cell(Vector2i(i,j),3, Vector2i(0,0),0)
+				change_ce_round.append(Vector2i(i,j))
+	for cell in change_ce_round:
+		set_cell(cell, 3, Vector2i(0,0),0)
