@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv04n3ad5mn1s"]
+[gd_scene load_steps=7 format=3 uid="uid://bv04n3ad5mn1s"]
 
 [ext_resource type="PackedScene" uid="uid://cdsdku4hcsbu0" path="res://tilemap.tscn" id="1_531i1"]
 [ext_resource type="PackedScene" uid="uid://bjxxg3f20e3xv" path="res://joueur.tscn" id="2_1cqrk"]
 [ext_resource type="PackedScene" uid="uid://cevl2qi13rmqp" path="res://herbefeu.tscn" id="3_mr01b"]
 [ext_resource type="PackedScene" uid="uid://cwuahbnk3p8nu" path="res://tente.tscn" id="4_lbloo"]
+[ext_resource type="PackedScene" uid="uid://cx54dunjfv7t1" path="res://layer_feu.tscn" id="4_sphvh"]
 
 [sub_resource type="FontVariation" id="FontVariation_nvyv4"]
 
@@ -60,10 +61,17 @@ text = "0 bouteille
 "
 
 [node name="PropagationTimer" type="Timer" parent="."]
+autostart = true
 
 [node name="Herbefeu" parent="." instance=ExtResource("3_mr01b")]
+visible = false
 z_index = 1
 position = Vector2(673, 287)
 
 [node name="tente" parent="." instance=ExtResource("4_lbloo")]
 position = Vector2(366, 275)
+
+[node name="Feu_sur_herbe" parent="." instance=ExtResource("4_sphvh")]
+tile_map_data = PackedByteArray(0, 0, 3, 0, 5, 0, 3, 0, 0, 0, 0, 0, 0, 0, 15, 0, 5, 0, 3, 0, 0, 0, 0, 0, 0, 0)
+
+[connection signal="timeout" from="PropagationTimer" to="Feu_sur_herbe" method="_on_propagation_timer_timeout"]
