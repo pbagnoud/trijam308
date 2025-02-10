@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://bjxxg3f20e3xv" path="res://joueur.tscn" id="2_1cqrk"]
 [ext_resource type="Script" path="res://initialization.gd" id="3_g6pfs"]
 [ext_resource type="PackedScene" uid="uid://cwuahbnk3p8nu" path="res://tente.tscn" id="4_lbloo"]
-
 [ext_resource type="PackedScene" uid="uid://d04re7ucsxir8" path="res://sortie.tscn" id="5_0y7rh"]
 
 [sub_resource type="FontVariation" id="FontVariation_nvyv4"]
@@ -12,6 +11,11 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_531i1")]
+
+[node name="Initialization" type="Node" parent="."]
+script = ExtResource("3_g6pfs")
+tent_scene = ExtResource("4_lbloo")
+sortie_scene = ExtResource("5_0y7rh")
 
 [node name="Joueur" parent="." instance=ExtResource("2_1cqrk")]
 position = Vector2(571, 260)
@@ -63,8 +67,3 @@ text = "0 bouteille
 
 [node name="PropagationTimer" type="Timer" parent="."]
 autostart = true
-
-[node name="Initialization" type="Node" parent="."]
-script = ExtResource("3_g6pfs")
-tent_scene = ExtResource("4_lbloo")
-sortie_scene = ExtResource("5_0y7rh")

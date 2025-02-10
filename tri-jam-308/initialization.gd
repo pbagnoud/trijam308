@@ -12,8 +12,8 @@ func spawn_tent():
 	# Generate random coordinates within the viewport.
 	var x = randi() % 30
 	var y = randi() % 30
-	print("tente", x, " ", y)
 	var random_position = Vector2(x, y)
+	print("tente ", random_position)
 
 	# Instantiate the tent scene.
 	var tent_instance = tent_scene.instantiate()
@@ -28,8 +28,8 @@ func spawn_sortie():
 	
 	# Generate random coordinates within the viewport.
 	var x = randi() % 30
-	print("sortie", x)
 	var random_position = Vector2(x, 60)
+	print("sortie ", random_position)
 
 	# Instantiate the tent scene.
 	var sortie_instance = sortie_scene.instantiate()
