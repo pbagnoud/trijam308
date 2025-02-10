@@ -143,14 +143,6 @@ animation = &"walk_right"
 autoplay = "walk_right"
 frame_progress = 0.769266
 
-[node name="RayCast" type="Node2D" parent="."]
-
-[node name="raycastRight" type="RayCast2D" parent="RayCast"]
-target_position = Vector2(39, 0)
-
-[node name="raycastLeft" type="RayCast2D" parent="RayCast"]
-target_position = Vector2(-39, 0)
-
 [node name="Gestion Objets" parent="." instance=ExtResource("3_phyil")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
