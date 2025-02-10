@@ -49,3 +49,19 @@ func _physics_process(delta: float) -> void:
 		
 	
 	move_and_slide()
+
+
+func _on_zone_chaleur_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_zone_chaleur_area_exited(area: Area2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_zone_chaleur_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_zone_chaleur_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.

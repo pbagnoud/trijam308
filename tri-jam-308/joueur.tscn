@@ -1,11 +1,18 @@
-[gd_scene load_steps=23 format=3 uid="uid://bjxxg3f20e3xv"]
+[gd_scene load_steps=25 format=3 uid="uid://bjxxg3f20e3xv"]
 
 [ext_resource type="Script" path="res://joueur.gd" id="1_jqwck"]
 [ext_resource type="Texture2D" uid="uid://bmbn2pgcchhhc" path="res://Data/idle.png" id="2_0kkpu"]
 [ext_resource type="Texture2D" uid="uid://cgnuq6365pkmx" path="res://Data/walk_down.png" id="2_ykgrj"]
+[ext_resource type="Script" path="res://zone_chaleur.gd" id="3_g30vu"]
 [ext_resource type="PackedScene" uid="uid://6llviiqjrsmq" path="res://gestion_objets.tscn" id="3_phyil"]
 [ext_resource type="Texture2D" uid="uid://kowkiqnqwxr2" path="res://Data/walk_right.png" id="4_0eltp"]
 [ext_resource type="Texture2D" uid="uid://csc1njuouoyqe" path="res://Data/walk_up.png" id="4_rmmbf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_foonv"]
+radius = 27.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f7t6v"]
+radius = 50.01
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_akjfv"]
 atlas = ExtResource("2_0kkpu")
@@ -128,14 +135,27 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_foonv"]
-radius = 27.0
-
 [node name="Joueur" type="CharacterBody2D" groups=["Player"]]
 z_index = 10
 script = ExtResource("1_jqwck")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_foonv")
+
 [node name="température" type="Node2D" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="température"]
+offset_left = -36.0
+offset_top = -42.0
+offset_right = 36.0
+offset_bottom = -34.0
+show_percentage = false
+
+[node name="ZoneChaleur" type="Area2D" parent="température"]
+script = ExtResource("3_g30vu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="température/ZoneChaleur"]
+shape = SubResource("CircleShape2D_f7t6v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5d8ey")
@@ -145,5 +165,5 @@ frame_progress = 0.769266
 
 [node name="Gestion Objets" parent="." instance=ExtResource("3_phyil")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_foonv")
+[connection signal="body_entered" from="température/ZoneChaleur" to="." method="_on_zone_chaleur_body_entered"]
+[connection signal="body_exited" from="température/ZoneChaleur" to="." method="_on_zone_chaleur_body_exited"]

@@ -6,7 +6,7 @@ extends Area2D
 
 	
 func _on_body_entered(Body: CharacterBody2D) -> void:	
-	objet_disponible = false
+	#objet_disponible = false
 	objet_à_portée = true
 	sprite_2d.modulate = Color(0,0,1)
 	
