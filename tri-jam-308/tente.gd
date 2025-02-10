@@ -2,14 +2,18 @@ extends Area2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var objet_disponible: bool = true
+@onready var objet_à_portée : bool = false
 
 	
-func _on_body_entered(body: CharacterBody2D) -> void:
-	print("i'm in")
+func _on_body_entered(body: Node2D) -> void:
 	objet_disponible = false
-	#sprite_2d.modulate = 666666
-	sprite_2d.modulate = Color(0,1,0)
+	objet_à_portée = true
+	sprite_2d.modulate = Color(0,0,1)
 	
+
+func _on_body_exited(body: Node2D) -> void:
+	objet_à_portée = false
+	sprite_2d.modulate = Color(1,1,1)
 	
 
 

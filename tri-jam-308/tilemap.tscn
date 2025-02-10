@@ -1,7 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://cdsdku4hcsbu0"]
 
 [ext_resource type="PackedScene" uid="uid://c30kqq0mgmet7" path="res://herbe.tscn" id="1_ygo5m"]
-
 [ext_resource type="Script" path="res://tilemap.gd" id="2_d3xit"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_p7th3"]
