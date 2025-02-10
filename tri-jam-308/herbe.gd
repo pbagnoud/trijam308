@@ -3,7 +3,7 @@ extends Node2D
 @onready var aire_herbe: Area2D = $AireHerbe
 @onready var image_herbe_enfeu: Sprite2D = $ImageHerbeEnfeu
 
-var est_enfeu: bool = false :
+var est_enfeu: bool = true :
 	set(value) :
 		est_enfeu = value
 		image_herbe_enfeu.visible = true
@@ -29,5 +29,5 @@ func _on_propagation_timer_timeout() -> void:
 				chance_de_prendre_feu += 0.1
 		else :
 			continue
-	if random_number > chance_de_prendre_feu :
+	if random_number < chance_de_prendre_feu :
 		est_enfeu = true

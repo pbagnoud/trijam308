@@ -1,7 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://bv04n3ad5mn1s"]
 
 [ext_resource type="PackedScene" uid="uid://cdsdku4hcsbu0" path="res://tilemap.tscn" id="1_531i1"]
-[ext_resource type="PackedScene" uid="uid://bjxxg3f20e3xv" path="res://joueur.tscn" id="2_wcdv4"]
+
+[ext_resource type="PackedScene" uid="uid://bjxxg3f20e3xv" path="res://joueur.tscn" id="2_1cqrk"]
+
 
 [sub_resource type="FontVariation" id="FontVariation_nvyv4"]
 
@@ -9,9 +11,11 @@
 
 [node name="TileMap" parent="." instance=ExtResource("1_531i1")]
 
-[node name="Joueur" parent="." instance=ExtResource("2_wcdv4")]
+[node name="Joueur" parent="." instance=ExtResource("2_1cqrk")]
+position = Vector2(571, 260)
 
 [node name="Camera2D" type="Camera2D" parent="Joueur"]
+position = Vector2(0, -4)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -20,7 +24,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -172.0
+offset_top = -147.0
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 3
@@ -32,11 +37,14 @@ layout_mode = 0
 offset_top = -476.0
 offset_right = 40.0
 offset_bottom = -436.0
+metadata/_edit_use_anchors_ = true
 
 [node name="moula" type="RichTextLabel" parent="CanvasLayer/TextureRect"]
 layout_mode = 2
-offset_right = 162.0
-offset_bottom = 171.0
+offset_left = 78.0
+offset_top = 8.0
+offset_right = 272.0
+offset_bottom = 179.0
 theme_override_fonts/normal_font = SubResource("FontVariation_nvyv4")
 theme_override_font_sizes/normal_font_size = 100
 text = "0 €"

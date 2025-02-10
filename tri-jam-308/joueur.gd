@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 130.0
+const SPEED = 390.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var raycast_right: RayCast2D = $RayCast/raycastRight
@@ -23,6 +23,26 @@ func _physics_process(delta: float) -> void:
 		velocity.y = direction[1] * SPEED
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
+		
+	#Play animations
+	animated_sprite.flip_h = false
+	if direction_vert == 0 and direction_hor == 0:
+		animated_sprite.play("idle")
+	elif direction_vert == 1:
+		animated_sprite.play("walk_down")
+	elif direction_vert == -1:
+		animated_sprite.play("walk_up")
+
+	elif direction_hor == 1:
+		animated_sprite.play("walk_right")
+		
+	elif direction_hor == -1:
+		animated_sprite.flip_h = true
+		animated_sprite.play("walk_right")
+		
+		
+
+		
 		
 	#Collision avec tentes
 	if raycast_right.is_colliding():
