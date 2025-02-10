@@ -49,19 +49,21 @@ theme_override_fonts/normal_font = SubResource("FontVariation_nvyv4")
 theme_override_font_sizes/normal_font_size = 100
 text = "0 €"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/TextureRect"]
+[node name="bouteilles" type="RichTextLabel" parent="CanvasLayer/TextureRect"]
 layout_mode = 0
 offset_left = 626.0
 offset_top = 2.0
 offset_right = 1154.0
 offset_bottom = 170.0
 theme_override_font_sizes/normal_font_size = 100
-text = "0 bottle"
+text = "0 bouteille
+"
 
 [node name="PropagationTimer" type="Timer" parent="."]
 
 [node name="Herbefeu" parent="." instance=ExtResource("3_mr01b")]
-position = Vector2(710, 258)
+z_index = 1
+position = Vector2(673, 287)
 
 [node name="tente" parent="." instance=ExtResource("4_lbloo")]
 position = Vector2(366, 275)
